@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assets.Script
 {
-    internal class Deck
+    public class Skill
     {
     }
 }

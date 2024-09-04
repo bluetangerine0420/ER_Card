@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Assets.Script
 {
-    internal class Hand
+    public class Deck
     {
+        Card[] cards;
     }
 }
