@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class Field : MonoBehaviour
+    public class Party
     {
-        public Space[] spaces;
+        public Unit[] units;
     }
 }

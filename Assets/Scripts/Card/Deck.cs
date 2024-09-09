@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Script
+namespace Assets.Scripts
 {
     public class Deck
     {

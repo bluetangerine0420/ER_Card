@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Script
+namespace Assets.Scripts
 {
     public class Hand : MonoBehaviour
     {
