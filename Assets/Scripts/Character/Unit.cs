@@ -27,5 +27,6 @@ namespace Assets.Scripts
         public Space space_Cur;
 
         public Skill[] skills;
+        public Buff[] buffs;
     }
 }

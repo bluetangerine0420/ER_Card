@@ -8,14 +8,14 @@ namespace Assets.Scripts
 {
     public interface IBattleModel
     {
-        public void BattleStart(Party playerParty, Party enemyParty);
-        public void GetBuff(Unit unit);
+        public void BattleStart(Party party1, Party party2);
+        public void GetBuff(Buff buff, Unit effecter);
         public void LossBuff(Unit unit);
-        public void BuffCheck(Buff[] buffs);
 
-        public bool isPlayerFirst(Party playerParty, Party enemyParty);
+        public bool isPlayerFirst();
 
-
+        public Unit GetUnit(int index);
+        public Party GetParty();
 
     }
 }

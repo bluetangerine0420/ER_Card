@@ -22,11 +22,13 @@ namespace Assets.Scripts
     public struct BuffDisplayModel
     {
         public Sprite BuffSprite { get; }
+        public string Id { get; }
         public int Time { get; }
 
-        public BuffDisplayModel(Sprite buffSprite, int time)
+        public BuffDisplayModel(Sprite buffSprite, string id ,int time)
         {
             BuffSprite = buffSprite;
+            Id = id;
             Time = time;
         }
     }
@@ -35,8 +37,8 @@ namespace Assets.Scripts
         public void ShowBuff(BuffDisplayModel getBuffs, int index);
         public void HideBuff(int index);
 
-        public void FrontUnit(Image unit, Vector2 FrontVec);
-        public void BackUnit(Image unit, Vector2 BackVec);
+        public void FrontUnit(Image unit);
+        public void BackUnit(Image unit);
         public void UnitUpdate(UnitDisplayModel unit);
 
 

@@ -8,7 +8,9 @@ namespace Assets.Scripts
 {
     public interface IBattlePresenter
     {
-        public void GetBuff(int index);
+        public BuffDisplayModel CreatBuffDisplay(Buff buff);
+        public UnitDisplayModel CreatUnitDisplay(Unit unit);
+        public void GetBuff(int unitIndex);
         public void LossBuff(int index);
     }
 }

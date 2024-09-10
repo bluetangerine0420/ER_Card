@@ -17,9 +17,11 @@ namespace Assets.Scripts
 
         [Header("Buff UI")]
         [SerializeField] private BuffDisplayModel[] Buffs;
-        [SerializeField] private BuffDisplayModel emptyBuffs = new BuffDisplayModel(null, 0);
+        [SerializeField] private BuffDisplayModel emptyBuffs = new BuffDisplayModel(null, null, 0);
 
-        private IBattlePresenter presenter;
+        private IBattlePresenter m_battlePresenter;
+        [SerializeField] Vector2 FrontVec;
+        [SerializeField] Vector2 BackVec;
 
         public void ShowBuff(BuffDisplayModel getBuffs , int index)
         {
@@ -31,11 +33,11 @@ namespace Assets.Scripts
 
         }
 
-        public void FrontUnit(Image unit, Vector2 FrontVec)
+        public void FrontUnit(Image unit)
         {
             unit.transform.position = FrontVec;
         }
-        public void BackUnit(Image unit, Vector2 BackVec)
+        public void BackUnit(Image unit)
         {
             unit.transform.position = BackVec;
         }

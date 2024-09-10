@@ -10,5 +10,13 @@ namespace Assets.Scripts
     {
         public string id;
         public int time;
+        public bool isStack;
+
+        public Buff()
+        {
+            id = null;
+            time = 0;
+            isStack = false;
+        }
     }
 }
