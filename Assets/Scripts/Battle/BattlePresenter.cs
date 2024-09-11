@@ -13,11 +13,11 @@ namespace Assets.Scripts
 
         public BuffDisplayModel CreatBuffDisplay(Buff buff)
         {
-
+            return new BuffDisplayModel(,buff.id, buff.time);
         }
         public UnitDisplayModel CreatUnitDisplay(Unit unit)
         {
-
+            return new UnitDisplayModel(,);
         }
         public void GetBuff(int unitIndex)
         {
