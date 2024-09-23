@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+
     public class Hand : MonoBehaviour
     {
         private int card_Num_Max;
@@ -29,4 +28,4 @@ namespace Assets.Scripts
 
         }
     }
-}
+

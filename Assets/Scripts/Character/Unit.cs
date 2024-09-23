@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine.TextCore.Text;
 
-namespace Assets.Scripts
-{
+
     public class Unit
     {
         public string id;
@@ -24,9 +23,7 @@ namespace Assets.Scripts
 
         public Equipment[] equipments = new Equipment[5];
 
-        public Space space_Cur;
-
         public Skill[] skills;
         public Buff[] buffs;
     }
-}
+

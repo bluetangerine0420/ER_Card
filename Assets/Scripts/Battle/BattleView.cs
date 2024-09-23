@@ -6,55 +6,92 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts
+
+public class BattleView : MonoBehaviour, IBattleView
 {
-    public class BattleView :MonoBehaviour ,IBattleView
+    [Header("Unit UI")]
+    [SerializeField] private Image[] UnitImages;
+
+    [Header("Change UI")]
+    [SerializeField] private GameObject changeUi;
+    [SerializeField] private GameObject changeBoutton;
+
+    [Header("UnitState UI")]
+    [SerializeField] private GameObject unitStateUi;
+    [SerializeField] private Image HpUi;
+
+    [Header("TurnEnd UI")]
+    [SerializeField] private GameObject bigTurnEndUi;
+    [SerializeField] private GameObject smallTurnEndUi;
+
+    [Header("Buff UI")]
+    [SerializeField] private BuffDisplayModel[] Buffs;
+    [SerializeField] private BuffDisplayModel emptyBuffs = new BuffDisplayModel(null, null, 0);
+
+    private IBattlePresenter m_battlePresenter;
+    [SerializeField] Vector2 FrontVec;
+    [SerializeField] Vector2 BackVec;
+
+    public void ShowBuff(BuffDisplayModel getBuffs, int index)
     {
+        Buffs[index] = getBuffs;
+    }
+    public void HideBuff(int index)
+    {
+        Buffs[index] = emptyBuffs;
 
-        [Header("UnitState UI")]
-        [SerializeField] private GameObject unitStateUi;
-        [SerializeField] private Image HpUi;
+    }
 
-        [Header("Buff UI")]
-        [SerializeField] private BuffDisplayModel[] Buffs;
-        [SerializeField] private BuffDisplayModel emptyBuffs = new BuffDisplayModel(null, null, 0);
+    public void FrontUnit(Image unit)
+    {
+        unit.rectTransform.position = new Vector2(unit.rectTransform.position.x, FrontVec.y);
+    }
 
-        private IBattlePresenter m_battlePresenter;
-        [SerializeField] Vector2 FrontVec;
-        [SerializeField] Vector2 BackVec;
-
-        public void ShowBuff(BuffDisplayModel getBuffs , int index)
+    public void BackUnit()
+    {
+        for (int i = 0; i < UnitImages.Length; i++)
         {
-            Buffs[index] = getBuffs;
+            UnitImages[i].rectTransform.position = new Vector2(UnitImages[i].rectTransform.position.x, BackVec.y);
         }
-        public void HideBuff(int index)
-        {
-            Buffs[index] = emptyBuffs;
-
-        }
-
-        public void FrontUnit(Image unit)
-        {
-            unit.transform.position = FrontVec;
-        }
-        public void BackUnit(Image unit)
-        {
-            unit.transform.position = BackVec;
-        }
+    }
 
 
-        public void ShowUnitState()
-        {
-            unitStateUi.SetActive(true);
-        }
-        public void HideUnitState()
-        {
-            unitStateUi.SetActive(false);
+    public void ShowUnitState()
+    {
+        unitStateUi.SetActive(true);
+    }
+    public void HideUnitState()
+    {
+        unitStateUi.SetActive(false);
 
-        }
-        public void UnitUpdate(UnitDisplayModel unit)
-        {
-            HpUi = unit.HpSprite;
-        }
+    }
+    public void UnitStateUpdate(UnitDisplayModel unit)
+    {
+        HpUi = unit.HpSprite;
+    }
+    public void ShowSkillEffect(SkillDisplayModel skillEffect)
+    {
+        skillEffect.SkillAnimation.Play();
+    }
+
+    public void ShowChangeUi()
+    {
+        changeUi.SetActive(true);
+    }
+    public void HideChangeUi()
+    {
+        changeUi.SetActive(false);
+    }
+
+    public void BigTurnEnd()
+    {
+        bigTurnEndUi.SetActive(true);
+        bigTurnEndUi.SetActive(false);
+    }
+
+    public void SmallTurnEnd()
+    {
+        smallTurnEndUi.SetActive(true);
+        smallTurnEndUi.SetActive(false);
     }
 }

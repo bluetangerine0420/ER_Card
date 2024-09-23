@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
+
     public class Skill
     {
+        public string id { get; }
+        public void UseSkill(Unit effecter)
+        {
+
+        }
     }
-}
+

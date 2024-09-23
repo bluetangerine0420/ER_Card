@@ -4,18 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
+
     public interface IBattleModel
     {
-        public void BattleStart(Party party1, Party party2);
+        public void BattleStart(Player party1, Player party2);
+        public bool isPlayerFirst();
+
+        public void GetCredit();
+        public void LossCredit();
+
         public void GetBuff(Buff buff, Unit effecter);
         public void LossBuff(Unit unit);
 
-        public bool isPlayerFirst();
+
+        public void UseSkill(Unit user, Unit effecter, int SkillIndex);
+        public bool UnitChange(Player party, int changeUnitIndex);
+
+        public void BigTurnStart();
+        public void SmallTurnEnd();
+        public void BigTurnEnd();
 
         public Unit GetUnit(int index);
-        public Party GetParty();
+        public Player GetParty();
 
     }
-}
+

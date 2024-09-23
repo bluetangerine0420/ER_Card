@@ -4,10 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
-    public class Party
+
+    public class Player
     {
         public Unit[] units;
+        public Unit cur_Unit;
+
+        public bool bigTurn;
+        public bool curTurn;
     }
-}
+

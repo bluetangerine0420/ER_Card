@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
+
     public class Buff
     {
         public string id;
@@ -19,4 +18,4 @@ namespace Assets.Scripts
             isStack = false;
         }
     }
-}
+

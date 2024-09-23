@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
     public interface ICardModel
     {
+        public void CardDraw();
+        public void CardUse();
     }
-}
+

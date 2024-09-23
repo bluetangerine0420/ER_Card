@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+
     public class Field : MonoBehaviour
     {
         public Space[] spaces;
     }
-}
+

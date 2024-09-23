@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts
-{
+
     public struct UnitDisplayModel
     {
         public Sprite UnitSprite { get; }
@@ -32,17 +31,41 @@ namespace Assets.Scripts
             Time = time;
         }
     }
+    public struct SkillDisplayModel
+    {
+        public Animation SkillAnimation { get; }
+
+        public SkillDisplayModel(Animation skillAnimation)
+        {
+            SkillAnimation = skillAnimation;
+        }
+    }
     public interface IBattleView
     {
+
+        public void FirstPlayer();
+        public void BigTurnStart();
+
+        public void GetCredit();
+        public void LossCredit();
+
         public void ShowBuff(BuffDisplayModel getBuffs, int index);
         public void HideBuff(int index);
+            
+        public void UnitStateUpdate(UnitDisplayModel unit);
 
         public void FrontUnit(Image unit);
-        public void BackUnit(Image unit);
-        public void UnitUpdate(UnitDisplayModel unit);
+        public void BackUnit();
+        public void ShowChangeUi();
+        public void HideChangeUi();
 
+        public void ShowSkillEffect(SkillDisplayModel skillEffect);
+
+        public void BigTurnEnd();
+        public void SmallTurnEnd();
 
         public void ShowUnitState();
         public void HideUnitState();
+        
     }
-}
+

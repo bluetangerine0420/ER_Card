@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts
-{
+
     public enum Part
     {
         weapon,
@@ -22,4 +21,4 @@ namespace Assets.Scripts
         public float Def;
         public string id;
     }
-}
+

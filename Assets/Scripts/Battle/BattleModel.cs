@@ -5,15 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Assets.Scripts
-{
+
     public class BattleModel : MonoBehaviour, IBattleModel
     {
-        public Party playerParty;
-        public Party enemyParty;
-
-
-        public void BattleStart(Party playerParty, Party enemyParty)
+        public Player playerParty;
+        public Player enemyParty;
+        public ICardModel m_cardModel;
+        public void BattleStart(Player playerParty, Player enemyParty)
         {
             this.playerParty = playerParty;
             this.enemyParty = enemyParty;
@@ -37,40 +35,79 @@ namespace Assets.Scripts
         {
             for (int i = 0; i < effecter.buffs.Length; i++)
             {
-                if (effecter.buffs[i]!=null || effecter.buffs[i].id == buff.id)
+                if (effecter.buffs[i] != null || effecter.buffs[i].id == buff.id)
                 {
                     if (buff.isStack) effecter.buffs[i].time += buff.time;
                     else effecter.buffs[i] = buff;
                     break;
                 }
-                
+
             }
         }
         public void LossBuff(Unit unit)
         {
-            for(int i = 0;i < unit.buffs.Length; i++)
+            for (int i = 0; i < unit.buffs.Length; i++)
             {
                 if (unit.buffs[i].time <= 0 && !unit.buffs[i].isStack)
                 {
-                    for(int j = 0; j < unit.buffs.Length; j++)
+                    for (int j = 0; j < unit.buffs.Length; j++)
                     {
                         if (!(unit.buffs[i].time <= 0 && !unit.buffs[i].isStack) || unit.buffs[i].isStack)
                             unit.buffs[i] = unit.buffs[j];
-                            unit.buffs[j] = null;
+                        unit.buffs[j] = null;
                     }
                 }
             }
+        }
+        public void UseSkill(Unit user, Unit effecter, int SkillIndex)
+        {
+            user.skills[SkillIndex].UseSkill(effecter);
+        }
+        public bool UnitChange(Player party, int changeUnitIndex)
+        {
+            if (party.units[changeUnitIndex] == party.cur_Unit) return false;
+            else party.cur_Unit = party.units[changeUnitIndex];
+            return true;
+        }
+
+        
+
+        public void SmallTurnEnd()
+        {
+            if (playerParty.curTurn)
+            {
+                if (enemyParty.bigTurn)
+                {
+                    playerParty.curTurn = false;
+                    enemyParty.curTurn = true;
+                }
+            }
+            else if (enemyParty.curTurn)
+            {
+                
+            }
+        }
+
+        public void BigTurnStart()
+        {
+            m_cardModel.CardDraw();
+
+        }
+
+        public void BigTurnEnd()
+        {
+
         }
         public Unit GetUnit(int index)
         {
             return playerParty.units[index];
         }
 
-        public Party GetParty()
+        public Player GetParty()
         {
             return playerParty;
         }
 
 
     }
-}
+
