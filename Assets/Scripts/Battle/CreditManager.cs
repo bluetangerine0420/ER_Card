@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CreditManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void GetCredit(Player player, int getCredit)
     {
-        
+        player.credit += getCredit;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LossCredit(Player player, int lossCredit)
     {
-        
+        if(player.credit - lossCredit > 0) 
+            player.credit -= lossCredit;
+        else player.credit = 0;
     }
 }

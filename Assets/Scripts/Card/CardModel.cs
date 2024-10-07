@@ -7,5 +7,13 @@ using System.Threading.Tasks;
 
     public class CardModel : ICardModel
     {
+    public void CardDraw()
+    {
+        
     }
+    public void CardUse()
+    {
+
+    }
+}
 

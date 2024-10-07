@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,10 @@ public class BattleView : MonoBehaviour, IBattleView
     [SerializeField] private GameObject unitStateUi;
     [SerializeField] private Image HpUi;
 
+    [Header("TurnStart UI")]
+    [SerializeField] private GameObject bigTurnStartUi;
+    [SerializeField] private GameObject smallTurnStartUi;
+    
     [Header("TurnEnd UI")]
     [SerializeField] private GameObject bigTurnEndUi;
     [SerializeField] private GameObject smallTurnEndUi;
@@ -28,9 +33,40 @@ public class BattleView : MonoBehaviour, IBattleView
     [SerializeField] private BuffDisplayModel[] Buffs;
     [SerializeField] private BuffDisplayModel emptyBuffs = new BuffDisplayModel(null, null, 0);
 
+    [Header("Credit UI")]
+    [SerializeField] private GameObject getCreditUi;     
+    [SerializeField] private TextMeshPro getCreditValue;
+    [SerializeField] private GameObject lossCreditUi;     
+    [SerializeField] private TextMeshPro lossCreditValue;
+    
+    [Header("FirstPlayerPick")]
+    [SerializeField] private GameObject firstPlayerUi;     
+    [SerializeField] private GameObject sceondPlayerUi;
+
     private IBattlePresenter m_battlePresenter;
     [SerializeField] Vector2 FrontVec;
     [SerializeField] Vector2 BackVec;
+
+    public void FirstPlayer(bool isPlayer1_First)
+    {
+        if(isPlayer1_First)
+        {
+            firstPlayerUi.SetActive(true);
+        }
+    }
+    public void BigTurnStart()
+    {
+        bigTurnStartUi.SetActive(true);
+    }
+
+    public void GetCredit()
+    {
+        getCreditUi.SetActive(true);
+    }
+    public void LossCredit()
+    {
+        lossCreditUi.SetActive(true);
+    }
 
     public void ShowBuff(BuffDisplayModel getBuffs, int index)
     {
@@ -94,4 +130,10 @@ public class BattleView : MonoBehaviour, IBattleView
         smallTurnEndUi.SetActive(true);
         smallTurnEndUi.SetActive(false);
     }
+
+    public void FirstPlayer()
+    {
+
+    }
+
 }
