@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 
-public class Unit :MonoBehaviour
+public class Unit : MonoBehaviour
 {
     public string id;
 
@@ -22,9 +22,25 @@ public class Unit :MonoBehaviour
     public float atk;
     public float def;
 
-    public Equipment[] equipments = new Equipment[5];
+    public Equipment[] equipments = new Equipment[3];
 
     public Skill[] skills;
     public Buff[] buffs;
+
+    public void GetEquipment(Equipment equipment)
+    {
+        switch (equipment.part)
+        {
+            case EquipmentPart.weapon:
+                equipments[0] = equipment;
+                break;
+            case EquipmentPart.chest:
+                equipments[1] = equipment;
+                break;
+            case EquipmentPart.leg:
+                equipments[2] = equipment;
+                break;
+        }
+    }
 }
 

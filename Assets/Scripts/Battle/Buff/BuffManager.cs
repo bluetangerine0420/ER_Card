@@ -8,6 +8,20 @@ using UnityEngine;
 
 public class BuffManager : MonoBehaviour
 {
+    public static BuffManager buffManager = null;
+
+    void Awake()
+    {
+        if (null == buffManager)
+        {
+            buffManager = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void GetBuff(Buff buff, Unit effecter)
     {
         for (int i = 0; i < effecter.buffs.Length; i++)

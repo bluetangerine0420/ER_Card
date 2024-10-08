@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class CreditManager : MonoBehaviour
 {
+    public static CreditManager creditManager = null;
+
+    void Awake()
+    {
+        if (null == creditManager)
+        {
+            creditManager = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void GetCredit(Player player, int getCredit)
     {
         player.credit += getCredit;

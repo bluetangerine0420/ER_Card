@@ -8,7 +8,20 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-   
+    public static CardManager cardManager = null;
+    void Awake()
+    {
+        if (null == cardManager)
+        {
+            cardManager = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+
 
     public void CardDraw(Player player)
     {

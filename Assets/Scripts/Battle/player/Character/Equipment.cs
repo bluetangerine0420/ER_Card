@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 
-    public enum Part
+    public enum EquipmentPart
     {
         weapon,
-        head,
         chest,
-        arm,
         leg
     }
 
-    public class Equipment
+    public class Equipment : MonoBehaviour
     {
-        public Part part;
+        public EquipmentPart part;
         public float Atk;
         public float Def;
         public string id;

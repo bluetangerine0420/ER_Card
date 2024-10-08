@@ -11,14 +11,22 @@ using UnityEngine.UI;
 public class BattleManager : MonoBehaviour
 {
 
+    public static BattleManager battleManager = null;
+
+    void Awake()
+    {
+        if (null == battleManager)
+        {
+            battleManager = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
     public Player player1;
     public Player player2;
-    public TurnManager turnManager;
 
-    public void Awake()
-    {
-        
-    }
 
     public void Start()
     {
@@ -29,7 +37,7 @@ public class BattleManager : MonoBehaviour
     {
         this.player1 = player1;
         this.player2 = player2;
-        turnManager.BigTurnStart();
+        TurnManager.turnManager.BigTurnStart();
     }
 
     public bool isPlayerFirst(Player player1, Player player2)

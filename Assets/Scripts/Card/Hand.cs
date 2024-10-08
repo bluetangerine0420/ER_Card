@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-    public class Hand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+    public class Hand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
         private int card_Num_Max;
         public int card_Num_Cur;
@@ -25,18 +25,14 @@ using UnityEngine.EventSystems;
         }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("포인터가 핸드 UI에 들어왔습니다.");
+        // All Card Big
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("포인터가 핸드 UI에서 나갔습니다.");
+        // All Card Small
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        //Item Using
-        Debug.Log("핸드 UI가 클릭되었습니다.");
-    }
+
 }
 

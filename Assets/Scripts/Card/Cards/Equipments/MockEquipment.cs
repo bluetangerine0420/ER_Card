@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MockAttackCard : Card 
+public class MockEquipment : Equipment
 {
-    public override void UseCard()
-    {
-
-    }
 
 }

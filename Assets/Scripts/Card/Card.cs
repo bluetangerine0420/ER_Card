@@ -7,7 +7,6 @@ public enum CardType
 {
     consume,
     equipment
-
 }
 
 public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
@@ -19,17 +18,16 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public abstract void UseCard();
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("포인터가 카드 UI에 들어왔습니다.");
+        //Card Big
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("포인터가 카드 UI에서 나갔습니다.");
+        //Card Small
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //Item Using
-        Debug.Log("카드 UI가 클릭되었습니다.");
+        UseCard();
     }
 }
