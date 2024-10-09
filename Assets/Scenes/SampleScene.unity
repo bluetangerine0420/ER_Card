@@ -1175,7 +1175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   cost: 0
-  type: 1
+  type: 3
   equipment: {fileID: 6377841861815708580, guid: bee1f0daca60155408f651c5c72299bc, type: 3}
 --- !u!1 &1025639881
 GameObject:

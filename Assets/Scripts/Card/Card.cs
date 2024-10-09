@@ -5,7 +5,9 @@ using UnityEngine.EventSystems;
 
 public enum CardType
 {
-    consume,
+    food,
+    drink,
+    material    ,
     equipment
 }
 
@@ -29,5 +31,6 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public void OnPointerClick(PointerEventData eventData)
     {
         UseCard();
+        gameObject.SetActive(false);
     }
 }

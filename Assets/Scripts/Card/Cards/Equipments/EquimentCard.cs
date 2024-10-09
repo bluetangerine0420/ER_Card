@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MockEquimentCard : Card 
+public class EquimentCard : Card 
 {
     public Equipment equipment;
+    
     public override void UseCard()
     {
         if (BattleManager.battleManager.player1.curTurn)
