@@ -11,11 +11,11 @@ public class Unit : MonoBehaviour
 {
     public string id;
 
-    public float hp_Max;
-    public float hp_Cur;
+    public float max_Hp;
+    public float cur_Hp;
 
-    public float st_Max;
-    public float st_Cur;
+    public float max_Stamina;
+    public float cur_Stamina;
 
     public int speed;
 
@@ -30,6 +30,39 @@ public class Unit : MonoBehaviour
     public void GetEquipment(Equipment equipment)
     {
         switch (equipment.part)
+        {
+            case EquipmentPart.weapon:
+                equipments[0] = equipment;
+                break;
+            case EquipmentPart.chest:
+                equipments[1] = equipment;
+                break;
+            case EquipmentPart.leg:
+                equipments[2] = equipment;
+                break;
+        }
+    }
+
+    public void GetFood(Food food)
+    {
+        if (!(cur_Hp + food.hp >= max_Hp))
+        {
+            cur_Hp += food.hp;
+        }
+        else
+        {
+            cur_Hp = max_Hp;
+        }
+    }
+
+    public void GetDrink(Drink drink)
+    {
+        cur_Stamina += drink.stamina;
+    }
+
+    public void GetMaterianl(Material material, EquipmentPart part)
+    {
+        switch (part)
         {
             case EquipmentPart.weapon:
                 equipments[0] = equipment;

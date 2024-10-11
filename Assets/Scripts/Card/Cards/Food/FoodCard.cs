@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodCard : MonoBehaviour
+public class FoodCard : Card
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Equipment equipment;
 
-    // Update is called once per frame
-    void Update()
+    public override void UseCard()
     {
-        
+        if (BattleManager.battleManager.player1.curTurn)
+        {
+            BattleManager.battleManager.player1.cur_Unit
+        }
+
+        else if (BattleManager.battleManager.player2.curTurn)
+        {
+            BattleManager.battleManager.player2.cur_Unit.GetEquipment(equipment);
+        }
     }
 }
