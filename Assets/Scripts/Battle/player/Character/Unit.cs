@@ -65,13 +65,13 @@ public class Unit : MonoBehaviour
         switch (part)
         {
             case EquipmentPart.weapon:
-                equipments[0] = equipment;
+                equipments[0] = ;
                 break;
             case EquipmentPart.chest:
-                equipments[1] = equipment;
+                equipments[1] = ;
                 break;
             case EquipmentPart.leg:
-                equipments[2] = equipment;
+                equipments[2] = ;
                 break;
         }
     }
