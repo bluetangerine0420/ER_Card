@@ -16,13 +16,17 @@ public enum EquipmentPart
 public class Equipment : MonoBehaviour
 {
     public EquipmentPart part;
+
     public Equipment meteorite_Equipment;
     public Equipment lifeWood_Equipment;
     public Equipment forceCore_Equipment;
     public Equipment mithril_Equipment;
     public Equipment vfBloodSample_Equipment;
+
     public float Atk;
     public float Def;
     public string id;
+
+   
 }
 

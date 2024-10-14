@@ -60,19 +60,15 @@ public class Unit : MonoBehaviour
         cur_Stamina += drink.stamina;
     }
 
-    public void GetMaterianl(Material material, EquipmentPart part)
+    public void GetMaterianl(Material material, Equipment equipment)
     {
-        switch (part)
+        switch (material.materialKind)
         {
-            case EquipmentPart.weapon:
-                equipments[0] = ;
-                break;
-            case EquipmentPart.chest:
-                equipments[1] = ;
-                break;
-            case EquipmentPart.leg:
-                equipments[2] = ;
-                break;
+            case MaterialKind.LifeWood: equipment = equipment.lifeWood_Equipment; break;
+            case MaterialKind.Meteorite: equipment = equipment.meteorite_Equipment; break;
+            case MaterialKind.Mithril: equipment = equipment.mithril_Equipment; break;
+            case MaterialKind.ForceCore: equipment = equipment.forceCore_Equipment; break;
+            case MaterialKind.VfBloodSample: equipment = equipment.vfBloodSample_Equipment; break;
         }
     }
 }
