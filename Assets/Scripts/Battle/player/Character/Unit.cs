@@ -61,7 +61,7 @@ public class Unit : MonoBehaviour
     }
 
     public void GetMaterianl(Material material, Equipment equipment)
-    {///**/
+    {///**///
         switch (material.materialKind)
         {
             case MaterialKind.LifeWood: equipment = equipment.lifeWood_Equipment; break;
