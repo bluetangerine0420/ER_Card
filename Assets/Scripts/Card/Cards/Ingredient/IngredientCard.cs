@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaterialCard : Card
+public class IngredientCard : Card
 {
     public Equipment equipment;
-    public Material material;
+    public Ingredient material;
 
     public override void UseCard()
     {

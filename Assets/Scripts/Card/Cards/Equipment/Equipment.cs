@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-public enum EquipmentPart
-{
-    weapon,
-    chest,
-    leg
-}
-
-public class Equipment : MonoBehaviour
+[CreateAssetMenu(fileName = "Equipment", menuName = "Data/Equipment", order = int.MinValue)]
+public class Equipment : ScriptableObject
 {
     public EquipmentPart part;
 
@@ -27,6 +21,14 @@ public class Equipment : MonoBehaviour
     public float Def;
     public string id;
 
-   
+
+}
+
+
+public enum EquipmentPart
+{
+    weapon,
+    chest,
+    leg
 }
 

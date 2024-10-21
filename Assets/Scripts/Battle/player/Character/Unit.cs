@@ -60,16 +60,21 @@ public class Unit : MonoBehaviour
         cur_Stamina += drink.stamina;
     }
 
-    public void GetMaterianl(Material material, Equipment equipment)
+    public void GetMaterianl(Ingredient material, Equipment equipment)
     {
-        switch (material.materialKind)
+        for (int i = 0; i < 3; i++)
         {
-            case MaterialKind.LifeWood: equipment = equipment.lifeWood_Equipment; break;
-            case MaterialKind.Meteorite: equipment = equipment.meteorite_Equipment; break;
-            case MaterialKind.Mithril: equipment = equipment.mithril_Equipment; break;
-            case MaterialKind.ForceCore: equipment = equipment.forceCore_Equipment; break;
-            case MaterialKind.VfBloodSample: equipment = equipment.vfBloodSample_Equipment; break;
+            if (equipment == equipments[i]) {
+                switch (material.materialKind)
+                {
+                    case IngredientKind.LifeWood: equipments[i] = equipment.lifeWood_Equipment; break;
+                    case IngredientKind.Meteorite: equipments[i] = equipment.meteorite_Equipment; break;
+                    case IngredientKind.Mithril: equipments[i] = equipment.mithril_Equipment; break;
+                    case IngredientKind.ForceCore: equipments[i] = equipment.forceCore_Equipment; break;
+                    case IngredientKind.VfBloodSample: equipments[i] = equipment.vfBloodSample_Equipment; break;
+                }
+            }
         }
-    }
+    } 
 }
 
