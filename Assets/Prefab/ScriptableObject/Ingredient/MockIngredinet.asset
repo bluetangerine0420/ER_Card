@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e1511d893690c4ea2ebfb1c8ae6424, type: 3}
   m_Name: MockIngredinet
   m_EditorClassIdentifier: 
-  id: 
-  materialKind: 0
+  id: Mock
+  materialKind: 5
+  sprite: {fileID: 21300000, guid: 24627e91712de864dada8009bc3ef930, type: 3}

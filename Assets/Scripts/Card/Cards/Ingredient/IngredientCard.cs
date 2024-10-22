@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class IngredientCard : Card
 {
     public Equipment equipment;
     public Ingredient material;
+
+    public void Awake()
+    {
+        image.sprite = material.sprite;
+
+        nameText = GetComponentInChildren<TextMeshProUGUI>();
+        nameText.text = cardName;
+    }
 
     public override void UseCard()
     {

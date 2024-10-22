@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [CreateAssetMenu(fileName = "Equipment", menuName = "Data/Equipment", order = int.MinValue)]
@@ -16,6 +17,8 @@ public class Equipment : ScriptableObject
     public Equipment forceCore_Equipment;
     public Equipment mithril_Equipment;
     public Equipment vfBloodSample_Equipment;
+
+    public Sprite sprite;
 
     public float Atk;
     public float Def;

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public enum CardType
 {
@@ -16,8 +18,11 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public string id;
     public int cost;
     public CardType type;
-
+    public Image image;
+    public string cardName;
+    public TextMeshProUGUI nameText;
     public abstract void UseCard();
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         //Card Big

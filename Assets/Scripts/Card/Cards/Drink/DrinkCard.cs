@@ -1,10 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DrinkCard : Card
 {
     public Drink drink;
+
+    public void Awake()
+    {
+        image.sprite = drink.sprite;
+
+        nameText = GetComponentInChildren<TextMeshProUGUI>();
+        nameText.text = cardName;
+    }
 
     public override void UseCard()
     {

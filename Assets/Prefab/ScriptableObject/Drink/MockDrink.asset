@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89437d655621f142b7c40d73a9756db, type: 3}
   m_Name: MockDrink
   m_EditorClassIdentifier: 
-  stamina: 0
+  stamina: 5
   id: 
+  sprite: {fileID: 21300000, guid: db9b47a195b97e34c828b919d70a722b, type: 3}

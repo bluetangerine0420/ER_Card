@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06165cd79d8098349bb4a3a3afeec30b, type: 3}
   m_Name: MockFood
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 6
   id: 
+  sprite: {fileID: 21300000, guid: 1e32239cb3c2f9a43943021619363072, type: 3}
