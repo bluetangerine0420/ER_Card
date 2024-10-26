@@ -10,7 +10,7 @@ public class DrinkCard : Card
     public void Awake()
     {
         image.sprite = drink.sprite;
-        //i want to sleep
+        //i want to sleep im home
         nameText = GetComponentInChildren<TextMeshProUGUI>();
         nameText.text = cardName;
     }
