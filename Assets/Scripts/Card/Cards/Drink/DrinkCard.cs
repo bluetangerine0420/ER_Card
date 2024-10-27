@@ -9,10 +9,7 @@ public class DrinkCard : Card
 
     public void Awake()
     {
-        image.sprite = drink.sprite;
-        //i want to sleep im home
-        nameText = GetComponentInChildren<TextMeshProUGUI>();
-        nameText.text = cardName;
+        image = drink.sprite;
     }
 
     public override void UseCard()
@@ -25,5 +22,7 @@ public class DrinkCard : Card
         {
             BattleManager.battleManager.player2.cur_Unit.GetDrink(drink);
         }
+        Debug.Log("음료카드 실행");
+
     }
 }

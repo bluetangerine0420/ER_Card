@@ -42,6 +42,7 @@ public class TurnManager : MonoBehaviour
     {
 
     }
+
     public void SmallTurnEnd()
     {
         if (BattleManager.battleManager.player1.curTurn)

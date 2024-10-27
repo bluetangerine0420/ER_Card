@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Ingredient : ScriptableObject
 {
     public string id;
-    public IngredientKind materialKind;
+    public IngredientKind ingerdientKind;
     public Sprite sprite;
 }
 

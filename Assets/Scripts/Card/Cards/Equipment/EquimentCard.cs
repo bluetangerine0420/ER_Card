@@ -9,10 +9,7 @@ public class EquimentCard : Card
 
     public void Awake()
     {
-        image.sprite = equipment.sprite; 
-        
-        nameText = GetComponentInChildren<TextMeshProUGUI>();
-        nameText.text = cardName;
+        image = equipment.sprite; 
     }
 
     public override void UseCard()
@@ -25,6 +22,7 @@ public class EquimentCard : Card
         {
             BattleManager.battleManager.player2.cur_Unit.GetEquipment(equipment);
         }
+        Debug.Log("장비카드 실행");
     }
 
 }

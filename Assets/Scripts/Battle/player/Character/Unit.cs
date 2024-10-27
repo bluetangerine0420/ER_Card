@@ -65,7 +65,7 @@ public class Unit : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             if (equipment == equipments[i]) {
-                switch (material.materialKind)
+                switch (material.ingerdientKind)
                 {
                     case IngredientKind.LifeWood: equipments[i] = equipment.lifeWood_Equipment; break;
                     case IngredientKind.Meteorite: equipments[i] = equipment.meteorite_Equipment; break;

@@ -9,10 +9,7 @@ public class FoodCard : Card
 
     public void Awake()
     {
-        image.sprite = food.sprite;
-
-        nameText = GetComponentInChildren<TextMeshProUGUI>();
-        nameText.text = cardName;
+        image = food.sprite;
     }
 
     public override void UseCard()
@@ -21,10 +18,11 @@ public class FoodCard : Card
         {
             BattleManager.battleManager.player1.cur_Unit.GetFood(food);
         }
-
         else if (BattleManager.battleManager.player2.curTurn)
         {
             BattleManager.battleManager.player2.cur_Unit.GetFood(food);
         }
+        Debug.Log("음식카드 실행");
+
     }
 }

@@ -9,7 +9,7 @@ public enum CardType
 {
     food,
     drink,
-    material    ,
+    material,
     equipment
 }
 
@@ -18,19 +18,19 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public string id;
     public int cost;
     public CardType type;
-    public Image image;
-    public string cardName;
-    public TextMeshProUGUI nameText;
+    public  Sprite image;
+
+
     public abstract void UseCard();
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //Card Big
+        Debug.Log(id);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        //Card Small
+        Debug.Log("³ª°¨");
     }
 
     public void OnPointerClick(PointerEventData eventData)

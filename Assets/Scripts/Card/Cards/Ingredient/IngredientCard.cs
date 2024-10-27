@@ -10,10 +10,7 @@ public class IngredientCard : Card
 
     public void Awake()
     {
-        image.sprite = material.sprite;
-
-        nameText = GetComponentInChildren<TextMeshProUGUI>();
-        nameText.text = cardName;
+        image = material.sprite;
     }
 
     public override void UseCard()
@@ -26,5 +23,7 @@ public class IngredientCard : Card
         {
             BattleManager.battleManager.player2.cur_Unit.GetMaterianl(material, equipment);
         }
+        Debug.Log("재료카드 실행");
+
     }
 }

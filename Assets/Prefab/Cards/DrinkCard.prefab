@@ -94,10 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   cost: 0
-  type: 0
+  type: 1
   image: {fileID: 8647354204818257724}
   cardName: 
-  nameText: {fileID: 0}
+  nameText: {fileID: 7900094684511654597}
   drink: {fileID: 0}
 --- !u!1 &523516288498079300
 GameObject:
