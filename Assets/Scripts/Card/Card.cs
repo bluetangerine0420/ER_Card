@@ -13,12 +13,12 @@ public enum CardType
     equipment
 }
 
-public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
+public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string id;
     public int cost;
     public CardType type;
-    public  Sprite image;
+    public  Image image;
 
 
     public abstract void UseCard();
@@ -33,9 +33,6 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         Debug.Log("³ª°¨");
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        UseCard();
-        gameObject.SetActive(false);
-    }
+
+    
 }

@@ -9,7 +9,7 @@ public class FoodCard : Card
 
     public void Awake()
     {
-        image = food.sprite;
+        image.sprite = food.sprite;
     }
 
     public override void UseCard()
@@ -23,6 +23,7 @@ public class FoodCard : Card
             BattleManager.battleManager.player2.cur_Unit.GetFood(food);
         }
         Debug.Log("음식카드 실행");
+        gameObject.SetActive(false);
 
     }
 }

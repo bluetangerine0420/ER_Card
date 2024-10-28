@@ -9,7 +9,7 @@ public class EquimentCard : Card
 
     public void Awake()
     {
-        image = equipment.sprite; 
+        image.sprite = equipment.sprite; 
     }
 
     public override void UseCard()
@@ -23,6 +23,8 @@ public class EquimentCard : Card
             BattleManager.battleManager.player2.cur_Unit.GetEquipment(equipment);
         }
         Debug.Log("장비카드 실행");
+        gameObject.SetActive(false);
+
     }
 
 }

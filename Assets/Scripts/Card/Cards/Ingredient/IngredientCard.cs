@@ -10,7 +10,7 @@ public class IngredientCard : Card
 
     public void Awake()
     {
-        image = material.sprite;
+        image.sprite = material.sprite;
     }
 
     public override void UseCard()
@@ -24,6 +24,8 @@ public class IngredientCard : Card
             BattleManager.battleManager.player2.cur_Unit.GetMaterianl(material, equipment);
         }
         Debug.Log("재료카드 실행");
+        gameObject.SetActive(false);
+
 
     }
 }
