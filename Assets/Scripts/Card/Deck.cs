@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-
-public class Deck
+public class Deck : MonoBehaviour 
 {
     public Card[] cards;
-    private int card_Num_Max;
+    public int card_Num_Max;
     public int card_Num_Cur;
 
     public void DeckSort()

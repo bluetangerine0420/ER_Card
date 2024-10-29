@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stamina: 5
   id: 
-  sprite: {fileID: 21300000, guid: db9b47a195b97e34c828b919d70a722b, type: 3}
+  sprite: {fileID: 21300000, guid: 8d86c66cbb0e75a4abf5d1b4171f9f6f, type: 3}

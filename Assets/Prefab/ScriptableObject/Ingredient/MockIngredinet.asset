@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MockIngredinet
   m_EditorClassIdentifier: 
   id: Mock
-  materialKind: 5
-  sprite: {fileID: 21300000, guid: 24627e91712de864dada8009bc3ef930, type: 3}
+  ingerdientKind: 0
+  sprite: {fileID: 21300000, guid: d2bedf1436c00e64ab3f1b20515bab97, type: 3}

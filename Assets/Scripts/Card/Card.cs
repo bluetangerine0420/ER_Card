@@ -9,7 +9,7 @@ public enum CardType
 {
     food,
     drink,
-    material,
+    ingredient,
     equipment
 }
 

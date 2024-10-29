@@ -18,7 +18,7 @@ MonoBehaviour:
   forceCore_Equipment: {fileID: 11400000, guid: aa950c7d2012e9b4989266cc50aab8a9, type: 2}
   mithril_Equipment: {fileID: 11400000, guid: aa950c7d2012e9b4989266cc50aab8a9, type: 2}
   vfBloodSample_Equipment: {fileID: 11400000, guid: aa950c7d2012e9b4989266cc50aab8a9, type: 2}
-  sprite: {fileID: 21300000, guid: 84bf2e4fe5868da43a177ed6912216fe, type: 3}
+  sprite: {fileID: 21300000, guid: 90de763f3b6edb442b807915b30dc8b5, type: 3}
   Atk: 10
   Def: 10
   id: a
