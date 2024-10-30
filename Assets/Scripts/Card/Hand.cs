@@ -7,22 +7,23 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-    public class Hand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Hand : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-        private int card_Num_Max;
-        public int card_Num_Cur;
+    private int card_Num_Max;
+    public int card_Num_Cur;
+    [SerializeField] Vector2 back_hand_Pos;
+    [SerializeField] Vector2 front_hand_Pos;
+    public Card[] cards;
 
-        public Card[] cards;
-        
-        private void Start()
-        {
-            card_Num_Max = cards.Length;
-        }
+    private void Start()
+    {
+        card_Num_Max = cards.Length;
+    }
 
-        private void Update()
-        {
-            
-        }
+    private void Update()
+    {
+
+    }
     public void OnPointerEnter(PointerEventData eventData)
     {
         // All Card Big
@@ -30,7 +31,7 @@ using UnityEngine.EventSystems;
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // All Card Small
+        gameObject.SetActive(false);
     }
 
 

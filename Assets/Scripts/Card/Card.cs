@@ -13,7 +13,7 @@ public enum CardType
     equipment
 }
 
-public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public abstract class Card : MonoBehaviour
 {
     public string id;
     public int cost;
@@ -22,16 +22,6 @@ public abstract class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
 
     public abstract void UseCard();
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log(id);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        Debug.Log("³ª°¨");
-    }
 
 
     
