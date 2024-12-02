@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 88, y: 0}
   m_SizeDelta: {x: 225, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4647151106016168397
@@ -225,5 +225,5 @@ MonoBehaviour:
   cost: 0
   type: 2
   image: {fileID: 5958183491817283737}
-  equipment: {fileID: 0}
-  ingredient: {fileID: 0}
+  equipment: {fileID: 11400000, guid: 36a2fc1d162bfc44e90a070d81d6d8ce, type: 2}
+  ingredient: {fileID: 11400000, guid: 25726cbff1df6384bafdd530536d5265, type: 2}

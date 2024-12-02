@@ -51,7 +51,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card_Num_Cur: 0
-  cards: []
+  back_hand_Pos: {x: 0, y: 0}
+  front_hand_Pos: {x: 0, y: 0}
+  cards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cards_Pos:
+  - {x: -400, y: 0}
+  - {x: -200, y: 0}
+  - {x: 0, y: 0}
+  - {x: 200, y: 0}
+  - {x: 400, y: 0}
 --- !u!222 &4757822079046839982
 CanvasRenderer:
   m_ObjectHideFlags: 0

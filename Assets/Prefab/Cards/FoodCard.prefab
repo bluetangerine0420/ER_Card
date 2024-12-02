@@ -112,7 +112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -151, y: 0}
   m_SizeDelta: {x: 225, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4647151106016168397
@@ -225,4 +225,4 @@ MonoBehaviour:
   cost: 0
   type: 0
   image: {fileID: 5958183491817283737}
-  food: {fileID: 0}
+  food: {fileID: 11400000, guid: 566b72993b8568e47911f5c307c5dbb2, type: 2}
